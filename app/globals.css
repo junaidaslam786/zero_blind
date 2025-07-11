@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors from Color_Palette.txt  */
+  --color-neon-blue: 0 240 255; /* #00F0FF */
+  --color-dark-background: 10 14 26; /* #0A0E1A */
+  --color-accent-yellow: 255 180 0; /* #FFB400 */
+  --color-cyber-teal: 0 255 208; /* #00FFD0 */
+  --border-gradient: linear-gradient(90deg, rgb(var(--color-neon-blue-rgb)) 0%, rgb(var(--color-cyber-teal-rgb)) 100%);
+}
+
+@theme {
+  --color-neon-blue: rgb(var(--color-neon-blue-rgb));
+  --color-dark-background: rgb(var(--color-dark-background-rgb));
+  --color-accent-yellow: rgb(var(--color-accent-yellow-rgb));
+  --color-cyber-teal: rgb(var(--color-cyber-teal-rgb));
+}
+
+body {
+  background-color: rgb(var(--color-dark-background));
+  color: white;
+}
+
+#app-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url('/images/background-lightning.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px) brightness(0.6);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-dark-background-rgb) / 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-cyber-teal-rgb) / 0.7);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(var(--color-cyber-teal-rgb));
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  white-space: pre-wrap; 
+  word-break: break-all; 
+}
+
+p code {
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+#__next {
+  height: 100%;
+}
+
+#nav-mobile {
+  min-height: 170px;
+}
+
+.nav-item.dropdown .dropdown-item {
+  padding: 0;
+}
+
+.nav-item.dropdown .dropdown-item a {
+  color: inherit;
+}
+
+.nav-item.dropdown .dropdown-item .navbar-item {
+  width: 100%;
+  padding: .55rem 1.5rem;
+}
+
+.result-block-container .result-block {
+  opacity: 1;
+}
