@@ -15,7 +15,7 @@ export const GET = async function shows() {
     const res = new NextResponse();
     const { token: accessToken } = await auth0.getAccessToken();
     const apiPort = process.env.API_PORT || 3001;
-    const response = await fetch(`http://localhost:${apiPort}/api/shows`, {
+    const response = await fetch(`https://zero-blind-ekad.vercel.app/api/shows`, {
       headers: {
         Authorization: `Bearer ${accessToken}`
       }
